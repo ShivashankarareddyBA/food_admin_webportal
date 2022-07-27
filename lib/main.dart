@@ -7,7 +7,6 @@ import 'package:food_admin_webportal/main_screens/home_screen.dart';
 
 Future<void> main()  async
 {
-  WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
 
