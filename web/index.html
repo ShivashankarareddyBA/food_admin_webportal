@@ -54,15 +54,23 @@
       });
     });
   </script>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js";
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <script src="main.dart.js" type="application/javascript"></script>
 
 
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+
+
+  <script>
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
     apiKey: "AIzaSyCxaXWUGPkff50OYHZyHLSKckuarNHCbi8",
     authDomain: "foodsellerapp-facb0.firebaseapp.com",
     projectId: "foodsellerapp-facb0",
@@ -72,7 +80,8 @@
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+     firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
 </script>
 
 </body>

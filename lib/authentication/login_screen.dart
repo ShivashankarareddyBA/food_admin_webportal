@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
      //display error message
      final snackBar = SnackBar(
        content: Text(
-         "Error Occured: " + onError.toString(),
+         "Error Occurred: " + onError.toString(),
          style: const TextStyle(
            fontSize: 36,
            color: Colors.black,
@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
      ScaffoldMessenger.of(context).showSnackBar(snackBar);
    });
 
-   if(currentAdmin != null)
+   if(currentAdmin!= null)
    {
      //check if that admin record also exists in the admins collection in firestore database
      await FirebaseFirestore.instance
@@ -173,6 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   ElevatedButton(
                     onPressed: (){
+                      allowAdminToLogin();
 
                     },
                     style: ButtonStyle(

@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:food_admin_webportal/authentication/login_screen.dart';
 import 'package:intl/intl.dart';
 
 
@@ -272,6 +274,8 @@ class _HomeScreenState extends State<HomeScreen>
                 primary: Colors.red,
               ),
               onPressed: () {
+                FirebaseAuth.instance.signOut();
+                Navigator.push(context, MaterialPageRoute(builder: (c)=>const LoginScreen()));
 
               },
             ),
