@@ -7,7 +7,16 @@ import 'package:food_admin_webportal/main_screens/home_screen.dart';
 Future<void> main()  async
 {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyCxaXWUGPkff50OYHZyHLSKckuarNHCbi8", // Your apiKey
+      appId: "1:64673894501:web:e51857319828e10338b68c", // Your appId
+      messagingSenderId: "64673894501", // Your messagingSenderId
+      projectId: "foodsellerapp-facb0", // Your projectId
+    ),
+
+  );
 
   runApp(const MyApp());
 }
