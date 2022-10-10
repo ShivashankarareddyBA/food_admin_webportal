@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_admin_webportal/authentication/login_screen.dart';
+import 'package:food_admin_webportal/users/all_blocked_users_screen.dart';
+import 'package:food_admin_webportal/users/all_verified_users_screen.dart';
 import 'package:intl/intl.dart';
 
 
@@ -130,6 +132,7 @@ class _HomeScreenState extends State<HomeScreen>
                     primary: Colors.cyan,
                   ),
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  const AllVerifiedUsersScreen()));
 
                   },
                 ),
@@ -153,6 +156,7 @@ class _HomeScreenState extends State<HomeScreen>
                     primary: Colors.amber,
                   ),
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  const AllBlockedUsersScreen()));
 
                   },
                 ),
@@ -179,6 +183,9 @@ class _HomeScreenState extends State<HomeScreen>
                     primary: Colors.amber,
                   ),
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  const AllVerifiedUsersScreen()));
+
+
 
                   },
                 ),
@@ -202,6 +209,8 @@ class _HomeScreenState extends State<HomeScreen>
                     primary: Colors.cyan,
                   ),
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  const AllBlockedUsersScreen()));
+                 //Navigator.push(context, MaterialPageRoute(builder: (c)=> const HomeScreen()));
 
                   },
                 ),
@@ -229,6 +238,8 @@ class _HomeScreenState extends State<HomeScreen>
                     primary: Colors.cyan,
                   ),
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  const AllVerifiedUsersScreen()));
+
 
                   },
                 ),
@@ -252,6 +263,8 @@ class _HomeScreenState extends State<HomeScreen>
                     primary: Colors.amber,
                   ),
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>  const AllBlockedUsersScreen()));
+
 
                   },
                 ),
